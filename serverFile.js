@@ -63,7 +63,7 @@ app.get("/mobs", function (req, res, next) {
     console.log("Inside post of mobs");
     var values = Object.values(req.body);
     console.log(values);
-    let sql = `insert into mobs(name,price,brand,ram,rom,os) values($1,$2,$3,$4,$5,$6)`;
+    let sql = `insert into mobs(name,brand,price,ram,rom,os) values($1,$2,$3,$4,$5,$6)`;
     connData.query(sql, values, function (err, result) {
       console.log(result);
       if (err) res.status(404).send(err);
