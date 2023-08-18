@@ -93,7 +93,7 @@ app.get("/mobs", function (req, res, next) {
     console.log("Inside delete of mobs");
     let id = +req.params.id;
     let values = [id];
-    let sql = `delete from emps where id=$1`;
+    let sql = `delete from mobs where id=$1`;
     console.log(id);
     connData.query(sql, values, function (err, result) {
       console.log(sql, result);
